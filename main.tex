@@ -3,6 +3,8 @@
 \usepackage{underscore}
 \usepackage{vhistory}
 \usepackage[bookmarks=true]{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \hypersetup{
     bookmarks=false,    % show bookmarks bar?
     pdftitle={Software Requirement Specification},    % title
@@ -17,7 +19,7 @@
     linktoc=page            % only page is linked
 }%
 
-
+G
 
 \title{%
 
@@ -126,6 +128,65 @@ alkatrészei alapján
   \item A mars átlaghömérséklete z. k és j között ingadozik.
   \item A marsi UV l. Ez a földihez képest f/l, ami az eszközök élettartamát befolyásolja.
 \end{itemize}
+
+
+\section{Komfort}
+
+\paragraph{A marsjárón biztosítani kell maximum négy ember 20 napnyi összkomfortos komfortfokozatú életterét.}
+
+\begin{description}
+\item[összkomfortos] Az a lakás, amely legalább egy 12 $m^2$-t meghaladó alapterületű lakószobával, főzőhelyiséggel, fürdőhelyiséggel és WC-vel, valamint közművesítettséggel, melegvíz-ellátással és központos fűtési móddal rendelkezik. 
+\end{description}
+
+\includegraphics[scale=0.4]{images/komfort01.png}
+
+
+
+\begin{itemize}
+    \item Szobák száma: 5
+    \item fertőtlenítés, sterilizálás
+    \item vizsgálatvégző műszerek tárolása
+    \item 
+\end{itemize}
+
+A marsjáróban állandó oxigénszint, hőmérséklet és páratartalom kell ehhez három szenzor van szükség.
+
+Szenzorok:
+\begin{itemize}
+    \item hőmérséklet: $22^\circ C $ 
+    \item páratartalom: 40-60 \%
+    \item oxigénszint
+    \item nyomás
+    \item sugárzásmérő
+\end{itemize}
+
+\subsection{konyha és éléskamra}
+
+25nm-es konyha és étkező
+Egy ember napi 3 liter vízfogyasztással számolva 4 ember x 3liter x 20 nap = 240 l (minimum) tárolására alkalmas.
+\begin{itemize}
+    \item hűtőszekrény: mivel a Marson az átlaghőmérséklet $ -63^\circ C $ ezért a hűtésre fordított energiát a Mars légköréből biztosítják, hogy kevesebb kompressziós energiával lehessen a hűtést megoldani.
+    \item indukciós főzőlap
+    \item mosogatógép
+    \item egyéb konyhai eszközök (mikrohullámú sütő, robotgép, edények) tárolására alkalmas szekrény
+    \item evőeszközök: 4 pár étkészlet 4 darab pohár és bögre
+    \item szelektív hulladék gyűjtésére kialakított tárolók
+    \item 
+\end{itemize}
+
+\subsection{fürdőszoba}
+\subsection{vezetőfülke}
+\subsection{hálószoba}
+\begin{itemize}
+    \item hálókapszulák száma: 2 db (2m*0.5m*0.4m)
+    \item Szobák: hálószoba 
+    \item fertőtlenítés, sterilizálás
+    \item vizsgálatvégző műszerek tárolása
+    \item 
+\end{itemize}
+\subsection{nappali}
+
+
 
 \section{References (??)}
 \end{document}
