@@ -162,6 +162,7 @@ A követelmények egyedi azonosítására az alábbi formátumot használjuk \\
   \item \reqid{Z}: szkafander, űrruha követelményei
   \item \reqid{D}: drón követelményei
   \item \reqid{H}: humán követelmények
+  \item \reqid{L}: telekommunkációs követelmények
   \item \reqid{K}: kutatási követelmények
   \item \reqid{J}: javíthatósági követelmények
   \item \reqid{T}: strapabírósági követelmények
@@ -203,7 +204,7 @@ A megvalósítás ütemtervet, a marsbázis csapattal egyeztetve, az alábbiak s
 
 \section{Mérnöki követelmények}
 \begin{itemize}
-  \item A marsjáró mérete x*y*z. TODO:
+  \item A marsjáró mérete 8 m * 5 m * 3.5 m (Hosszúság * Szélesség * Magasság).
   \item A marsjáró kereke a ref{drive} fejezetben van definiálva \
   \item A marsi körülményeknek ellenálló anyag, védőréteg (\ref{strapabirosag} alapján)
 \end{itemize}
@@ -411,9 +412,9 @@ Forrás: https://www.weather.gov/fsd/mars
 
 \subsubsection{Telekommunikáció}
 
-A telekommunkációhoz XYZ típusú, PRZ paraméterű antennákat és XYZ típusú jelfeldolgozó egységeket fogunk használni. TODO:
+A telekommunkációhoz 2 megabit/s adatátviteli sebességű, úgynevezett UHF antennákat fogunk használni. \reqid{L_1}
 
-Forrás: https://descanso.jpl.nasa.gov/DPSummary/MER\_article\_cmp20051028.pdf
+Forrás: https://descanso.jpl.nasa.gov/DPSummary/MER\_article\_cmp20051028.pdf és https://mars.nasa.gov/msl/spacecraft/rover/communication/
 
 
 
@@ -428,13 +429,6 @@ Forrás: https://descanso.jpl.nasa.gov/DPSummary/MER\_article\_cmp20051028.pdf
   \item \reqid{Z_5} A tiszta oxigén légzése elött egy ú.n. elölégzésre van szükség, ami a nitrogént kiüríti a szervezetböl, így megelözve a sérüléseket. Ehhez szükséges vákuumkamra biztosítása. Javaslom a mars felé nyíló zsiliprendszer vákuumképzéssel felruházását.
   \item \reqid{Z_6} Oxigén nyomás kritikus csökkenés esetén, vagy kritikus áramcsökkenés esetén azonnali visszatérés megkövetelése. Fel nem töltött szkafanderek esetén töltés azonnali megkövetelése, vagy kötelezö visszatérés. A humán biztonság megköveteli, hogy mindig legyen töltött szkafander evakuációhoz.
 \end{itemize}
-
-\subsubsection{Energiaellátás} TODO:
-
-ötletek:
-- power
-  - managing the power in the rover
-  - how electric power is flowing in the vechile
 
 \subsubsection{Drón}
 
@@ -554,7 +548,7 @@ A fent említett rendszereken túl, a harmadik a sorban a telekommunkációs ren
   \item \textbf{regolit}: Szilárd kérgű égitesteken a felszíni törmelékes, általában laza szerkezetű kőzetrétege. A talaj is a regolitnak nevezhető, de regolitról leginkább akkor beszélünk, ha a regolitréteg nem talajosodott.
   \item \textbf{geológia}: földtan
   \item \textbf{hőpárologtatás}: a kiásott lyuk mélyére egy hevítőrudat juttatnak, a hő hatására a kőzetben reakciók hajtódnak végre, anyagok válnak ki, amelyek vizsgálatával fontos információhoz juthatunk
-
+  \item \textbf{UHF}: Ultra High Frequency, vagyis ultramagas frekevincia. 300 MHz és 3 GHz közötti tartomány.
 \end{itemize}
 
 

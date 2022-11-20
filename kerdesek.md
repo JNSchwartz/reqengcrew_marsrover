@@ -1,4 +1,4 @@
-- [ ] A marsjáró mérete x*y*z.
-- [ ] A telekommunkációhoz XYZ típusú, PRZ paraméterű antennákat és XYZ típusú jelfeldolgozó egységeket fogunk használni.
-- [ ] `\subsubsection{Energiaellátás}` úgy ahogy van hiányzik, vagy rossz helyen van (vagy máshol)
+- [X] A marsjáró mérete x*y*z.
+- [X] A telekommunkációhoz XYZ típusú, PRZ paraméterű antennákat és XYZ típusú jelfeldolgozó egységeket fogunk használni.
+- [X] `\subsubsection{Energiaellátás}` úgy ahogy van hiányzik, vagy rossz helyen van (vagy máshol)
 - [X] Z köbméter ásvány a bázisra való visszaszállítását kell biztosítani.
