@@ -6,7 +6,7 @@
 \usepackage{listings}
 \usepackage{xparse}
 \usepackage{xcolor}
-
+\usepackage{mhchem}
 
 
 \definecolorset{rgb/hsb/cmyk/gray}{}{}%
@@ -35,6 +35,8 @@
 
 
 \usepackage[bookmarks=true]{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \hypersetup{
     pdftitle={Software Requirement Specification},    % title
     pdfauthor={Yiannis Lazarides},                     % author
@@ -59,7 +61,7 @@
 
 \title{%
 
- 
+
 
 
 \Huge{Követelményelemzés}\\
@@ -114,6 +116,7 @@ Szerednik László Tamás: @szeredniklaszlo\\
   \vhEntry{1.7}{22.11.13}{apisc}{Strength requirements}
   \vhEntry{1.8}{22.11.13}{katilippa}{Repairablity and upgradability}
   \vhEntry{1.9}{22.11.20}{BreadKingGod}{Meghajtas 2.0}
+  \vhEntry{1.9}{22.11.20}{dopamean}{Komfort}
   \vhEntry{1.9.1}{22.11.13}{Robert Fiko}{Merge and review}
 
 
@@ -166,6 +169,8 @@ A követelmények egyedi azonosítására az alábbi formátumot használjuk \\
   \item \reqid{K}: kutatási követelmények
   \item \reqid{J}: javíthatósági követelmények
   \item \reqid{T}: strapabírósági követelmények
+  \item \reqid{KO}: komfort követelmények
+	  
   \item \reqid{U}: utókövetelmények
 \end{itemize}
 
@@ -500,6 +505,47 @@ A hőmérséklet tekintetében a járműnek fel kell készülnie a Marson uralko
 Összességében az eszköz épségének és használhatóságának megőrzésére fel kell szerelni egy olyan védelemmel, ami egyszerre tud ellenállni szélsőséges hőmérsékleti viszonyoknak és különböző mechasnikai behatásoknak is.
 
 
+\section{Komfort}
+
+\includegraphics[scale=0.7]{images/calpoly_vr.png}
+
+\paragraph{A marsjárón biztosítani kell maximum négy ember 20 napnyi összkomfortos komfortfokozatú életterét.}
+
+
+\begin{description}
+\item[összkomfortos] Az a lakás, amely legalább egy 12 $m^2$-t meghaladó alapterületű lakószobával, főzőhelyiséggel, fürdőhelyiséggel és WC-vel, valamint közművesítettséggel, melegvíz-ellátással és központos fűtési móddal rendelkezik. 
+\end{description}
+
+\includegraphics[scale=0.4]{images/komfort01.png}
+
+A fenti ábrán látható öt szobára  van szükség a legénység életterének biztosításához a belmagasság 2.2m 300 lumen megvilágítással. \\(\reqid{KO_1}) vezetőfülke 3m x 2m alapterületű, melyben két ülés található. Az üléseken állítható a fejtámla, a háttámla, az ülésmagasság, a kartámla magassága és szöge. Az ülés 1.7m x 0.8m x 0.65m méter. \\(\reqid{KO_2}) Fürdőszoba és mellékhelyiség 2m x 4m alapterületű, melyekben egy 0.75m x 0.75m alapterületű zuhanykabin helyezkedik el, valamint egy öblítéses wc és mosdókagyló. Mindkét elfolyást egy tisztító rendszerbe vezetjük el, víz visszanyerés céljából. 20 napnyi tisztálkodáshoz és szükségletek elvégzéséhez szükséges felszerelést egy 0.5m x 0.3m alapterületű falhoz rögzített szekrényben tároljuk.  \\(\reqid{KO_3}) Konyha és étkező 25 nm alapterületű. Egy ember napi 3 liter vízfogyasztással számolva 4 ember x 3liter x 20 nap = 240 l (minimum) tárolására alkalmas, mivel nagyrészét elő tudjuk állítani így 80 liter fogyasztásra kész szobahőmérséklető ivóvíztartály. 
+
+Konyha felszereltsége:
+\begin{itemize}
+    \item hűtőszekrény: mivel a Marson az átlaghőmérséklet $ -63^\circ C $ ezért a hűtésre fordított energiát a Mars légköréből biztosítják, hogy kevesebb kompressziós energiával lehessen a hűtést megoldani.
+    \item indukciós főzőlap
+    \item mosogatógép
+    \item egyéb konyhai eszközök (mikrohullámú sütő, robotgép, edények) tárolására alkalmas szekrény
+    \item evőeszközök: 4 pár étkészlet 4 darab pohár és bögre
+    \item szelektív hulladék gyűjtésére kialakított tárolók
+    \item mosó és szárítógép
+\end{itemize}
+
+(\reqid{KO_4}) Nappali, egy 3m x 4m alapterületű közösségi helység, melyben két darab egyszemélyes (állítható a fejtámla, a háttámla, az ülésmagasság, a kartámla magassága és szöge de a szék rögzítve van a padlóhoz) valamint egy kétszemélyes falhoz és padlóhoz rögzített 1.5m x 0.8m x 0.7m kanapé található -- minden bútoron biztonsági öv vihar esetére. A székek a kanapéval szemben helyezkednek el köztük egy 0.4m x 1m állítható magasságú asztallal. A szobában általános elsősegély csomag és defibrillátor a falra felszerelve található, alatta \ce{CO2} tűzoltó készülék.\\(\reqid{KO_5}) Hálószoba 3m x 4m területű melyben falhoz rögzített négy darab 0.4m x 0.3m belmagasságig érő ruhásszekrény a legénység számára és  2 db (2m*0.5m*0.4m) hálókapszula található
+
+A marsjáróban állandó oxigénszint, hőmérséklet, páratartalom, lég, hangnyomás és sugárzásmérő kell vagyis az alábbi szenzorok szükségesek:
+
+Szenzorok:
+\begin{itemize}
+    \item (\reqid{KO_6}) hőmérséklet: $22^\circ C $ 
+    \item (\reqid{KO_7})páratartalom: 40-60 \%
+    \item (\reqid{KO_8})oxigénszintmérő (lsd feljesbb humánkövetelmények)
+    \item (\reqid{KO_9})légnyomásmérő: 1013,25 hPa
+    \item (\reqid{KO_10})sugárzásmérő (külső és belső, hogy a kozmikus sugárzás ne veszélyeztessen emberéletet)
+    \item (\reqid{KO_11})dB mérő: 30-60 dB biztosítása (megfelelő hangszigetelés a külső zajok kiszűrésére
+\end{itemize}
+
+
 \section{Biztonsági követelmények}
 
 A biztonságos misszióhoz elengedhetetlen a jármű kockázat analaízise, mely során annak alrendszereit feltérképezzük és a kritikusakat meghatározzuk. 
@@ -532,6 +578,7 @@ A fent említett rendszereken túl, a harmadik a sorban a telekommunkációs ren
   \item A marsi UV sugárzás $\approx$50 W/m². Ez a földi átlagnál körülbelül 5-ször nagyobb, ami az eszközök élettartamát befolyásolja.
 \end{itemize}
 
+
 \section{További fogalmak}
 
 \begin{itemize}
@@ -550,12 +597,6 @@ A fent említett rendszereken túl, a harmadik a sorban a telekommunkációs ren
   \item \textbf{hőpárologtatás}: a kiásott lyuk mélyére egy hevítőrudat juttatnak, a hő hatására a kőzetben reakciók hajtódnak végre, anyagok válnak ki, amelyek vizsgálatával fontos információhoz juthatunk
   \item \textbf{UHF}: Ultra High Frequency, vagyis ultramagas frekevincia. 300 MHz és 3 GHz közötti tartomány.
 \end{itemize}
-
-
-
-
-
-
 
 
 \end{document}
