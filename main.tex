@@ -166,6 +166,8 @@ A követelmények egyedi azonosítására az alábbi formátumot használjuk \\
   \item \reqid{D}: drón követelményei
   \item \reqid{H}: humán követelmények
   \item \reqid{L}: telekommunkációs követelmények
+  \item \reqid{CS}: csatlakozási követelmények
+  \item \reqid{D}: drón követelmények
   \item \reqid{K}: kutatási követelmények
   \item \reqid{J}: javíthatósági követelmények
   \item \reqid{T}: strapabírósági követelmények
@@ -421,7 +423,23 @@ A telekommunkációhoz 2 megabit/s adatátviteli sebességű, úgynevezett UHF a
 
 Forrás: https://descanso.jpl.nasa.gov/DPSummary/MER\_article\_cmp20051028.pdf és https://mars.nasa.gov/msl/spacecraft/rover/communication/
 
+A marsjárók képesek egymással kommunikálni illetve a \reqid{L_2} bázissal, \reqid{L_3}űrállomással is (az ellátmányhajóval való kommunikációs kapcsolat szükségtelen)  full-duplex módon.  Ez a kommunikációs csatorna élő hang és videó kapcsolat létrehozására is képes. Ezt a járműben elhelyezett képernyő és kamera is biztosítja. A felvételeket a megrendelő kérésére tároljuk. Minimális, pár másodperces késés elfogadható a kommunikáció során.
+A kommunikáció biztosított a bázis \reqid{L_3} 300 km-es távolságú sugarában.
 
+
+\subsubsection{Mars járó bejáratai, csatlakozás a bázishoz}
+A járón \reqid{CS_1} két bejárat található, két szemközti oldalán. 
+\begin{itemize}
+\item \reqid{CS_2}A mars járóból a a bolygó felszinére való kijutást biztosító zsilipes rendszerrel működtetett kapu.
+\item \reqid{CS_3}A mars járóról a bázishoz való csatlakozást biztosító bejárat. A járművet a bázissal egy híd köti össze, mely mozgatható, így a vertikális egyenlőtlenségeket a bejáratok között ez hidalja át.
+\end{itemize}
+
+\reqid{CS_4}A bejáratot egy vezérlőpult irányítja.
+
+\reqid{CS_5}A zsilip kamrájában egyszerre két ember tartózkodhat.
+
+\reqid{CS_6}A kamra a marsi levegő szűrésén kívűl fertötlenítést is végez.
+A marsjáróknak  nem kell összekapcsolódniuk egymással, átjárni egyikből a másikba.
 
 \subsubsection{Szkafander/űrruha és a mars járó kapcsolata}
 \begin{itemize}
