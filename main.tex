@@ -322,39 +322,49 @@ Komponensek:
 \begin{itemize}
     \item \reqid{M_1} Kerék: 
         \begin{itemize}
-            \item Levegőmentes kerék
-            \item Alumíniumból kell készíteni
-            \item A tapadás érdekében kapcsokkal kell rendelkeznie
-            \item A rugós tapadásért titánium külőket kell bele építeni
+            \item \reqid{M_1_1} Levegőmentes kerék
+            \item \reqid{M_1_2} Alumíniumból kell készíteni
+            \item \reqid{M_1_3} A tapadás érdekében kapcsokkal kell rendelkeznie
+            \item \reqid{M_1_4} A rugós tapadásért titánium külőket kell bele építeni
         \end{itemize}
     \item \reqid{M_2} Futómű:
         \begin{itemize}
-            \item Fémből kell készíteni
-            \item Teherbírásának akkorának kell lenni, hogy elbírja a kocsi tömegét
+            \item \reqid{M_2_1} Rugalmas fémrács
+            \item \reqid{M_2_2} Teherbírás -- jármű teherbírásának összetevői
+                \begin{itemize}
+                    \item jármű tömege
+                    \item fúró- és robotkar és egyéb eszközök össztömege
+                    \item ellátmány, ami a tetőre (1 köbméter 1 méter átmérővel) helyezhető
+                    \item bútorzat és élelem össztömege
+                    \item akkumulátor
+                    \item legénység össztömege
+                    \item víz,és sűrített gázok
+                    \item tárolásra szánt ásványianyagok össztömege
+                \end{itemize}
         \end{itemize}
     \item \reqid{M_3} Motor:
         \begin{itemize}
-            \item Hidrogénmotor
-            \item Bázistól feltöltéskor vizet és energiát kapunk, a vizet a kapott energia segítségével kell oxigénre és hidrogénre bontani
-            \item A motor belsejében a hidrogént az oxigén segítségével elégetjük, a felszabaduló energiát használja a motor meghajtásra, a melléktermék vizet meg emberi fogyasztásra alkalmazható
+            \item \reqid{M_3_1} Hidrogénmotor
+            \item \reqid{M_3_2} Bázistól feltöltéskor vizet és energiát kapunk, a vizet a kapott energia segítségével kell oxigénre és hidrogénre bontani
+            \item \reqid{M_3_3} A motor belsejében a hidrogént az oxigén segítségével elégetjük, a felszabaduló energiát használja a motor meghajtásra, a melléktermék vizet meg emberi fogyasztásra alkalmazható
         \end{itemize}
     \item \reqid{M_4} Tank:
         \begin{itemize}
-            \item Méretének akkorának kell, hogy 200 km üzemanyag elférjen benne
-            \item Két azonos méretű üzemanyag cellából álljon
-            \item A két üzemanyag cellából párhuzamosan fogyasszon üzemanyagot
-            \item Az üzemanyag cellák legyenek képesek önállóan is ellátni az eszközt
-            \item Feltölthető legyen a bázisról
-            \item Legyen egy rendszer ami méri a tank az üzemanyagcellák töltöttségét
-            \item Ez a rendszer értesítse a vezetőt, amikor a tank töltöttség félig van
-            \item Az üzemanyagcellák dokkolva tölthetőnek kell lenniük
+            \item \reqid{M_4_1} Méretének akkorának kell, hogy 200 km üzemanyag elférjen benne
+            \item \reqid{M_4_2} Két azonos méretű üzemanyag cellából álljon
+            \item \reqid{M_4_3} A két üzemanyag cellából párhuzamosan fogyasszon üzemanyagot
+            \item \reqid{M_4_4} Az üzemanyag cellák legyenek képesek önállóan is ellátni az eszközt
+            \item \reqid{M_4_5} Feltölthető legyen a bázisról
+            \item \reqid{M_4_6} Legyen egy rendszer ami méri a tank az üzemanyagcellák töltöttségét
+            \item \reqid{M_4_7} Ez a rendszer értesítse a vezetőt, amikor a tank töltöttség félig van
+            \item \reqid{M_4_8} Az üzemanyagcellák dokkolva tölthetőnek kell lenniük
         \end{itemize}
     \item \reqid{M_5} Közlekedés:
         \begin{itemize}
-            \item El kell érnie a  25 km/h sebességet
-            \item Képesnek kell lennie 20 nap alatt 20 km-t megtenni
-            \item A bevehető meredekségének 20-30-osnak kell lennie
-            \item A járműnek képesnek kell lennie oldalazva közlekedni
+            \item \reqid{M_5_1} El kell érnie a  25 km/h sebességet
+            \item \reqid{M_5_2} Képesnek kell lennie 20 nap alatt 20 km-t megtenni
+            \item \reqid{M_5_3} A bevehető meredekségének 20-30-osnak kell lennie
+            \item \reqid{M_5_4} A járműnek képesnek kell lennie oldalazva közlekedni
         \end{itemize}
 \end{itemize}
 
@@ -381,7 +391,7 @@ Becslések és gyártás:
     \item Motor:
         \begin{itemize}
             \item Gyártás: delegáljuk a Massive Motor cégnek
-            \item Előfeltétel: 
+            \item Előfeltétel:  
                 \begin{itemize}
                     \item Tank
                 \end{itemize}
